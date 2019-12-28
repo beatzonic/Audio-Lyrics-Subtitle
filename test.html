@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    
+    <div id="lyrics_container">
+
+        
+        <audio id="my_audio" controls>
+          <source src="./in_case_you_didnt_know.mp3" type="audio/mpeg">
+          <track id="sub" kind="subtitles" label="English subtitles" src="./in_case_you_didnt_know.txt.vtt" srclang="en" default>
+          Your browser does not support the audio tag.
+        </audio>
+        
+        <p id="lyric" class="lyrics-class"></p>
+        
+    </div>
+    
+ 
+    <script>
+    
+    document.getElementById('my_audio').textTracks[0].addEventListener('cuechange', function() {
+    document.getElementById('lyric').innerText = this.activeCues[0].text;
+    
+});
+    </script>
+    
+   
+<!--
+The below animation I want to trigger on cue change event, 
+means along with the song the lyrics will be shown automatically but that should have a fadin animation effect on each cue
+
+    
+    <script>    
+        document.getElementById("lyric").style.animation = "fadein 1s 1"
+    }
+    </script>
+-->
+    
+    
+</body>
+</html>

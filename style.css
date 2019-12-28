@@ -1,0 +1,35 @@
+body{
+    
+    margin: 0;
+    padding: 0;
+}
+
+
+#lyrics_container{
+    width: 100%;
+    height: auto;
+    padding: 30px;
+    box-sizing: border-box;
+}
+
+p{
+    
+    font-size: 2em;
+    color: red;
+    font-weight: 600;
+
+}
+
+
+
+@keyframes fadein{
+    
+   0% {
+        opacity:0;
+    }
+    100% {
+        opacity:1;
+    } 
+    
+}
+
